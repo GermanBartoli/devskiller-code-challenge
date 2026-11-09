@@ -1,4 +1,24 @@
-# Bookstore Inventory with NUnit
+# Inventario de libros · Desafío C#
+
+**Ejercicio ASP.NET de operaciones CRUD sobre libros, con validación de ISBN y pruebas NUnit.**
+
+[![Repositorio](https://img.shields.io/badge/GitHub-GermanBartoli-181717?logo=github)](https://github.com/GermanBartoli/devskiller-code-challenge)
+
+[Empezar](#primeros-pasos) · [Mapa del repositorio](#mapa-del-repositorio) · [Autoría](#autoría-de-esta-documentación)
+
+![Guía visual: Inventario de libros · Desafío C#](docs/readme/guia.svg)
+
+*Esquema de orientación; no representa una captura de la aplicación.*
+
+## Primeros pasos
+
+1. Leé `Repository/BookRepository.cs` y `Controllers/BooksController.cs` para contrastar la implementación con la consigna.
+2. Revisá los casos de `BookCrudOperationASP_Net.Tests/`; el proyecto declara `net5.0`.
+3. Ejecutá `dotnet test BookCrudOperationASP_Net.Tests/BookCrudOperationASP_Net.Tests.csproj` en un entorno compatible. La consigna original se conserva debajo como referencia histórica.
+
+## Entorno de aprendizaje
+
+Este repositorio conserva ejercicios y versiones de su etapa de estudio. Revisá los archivos de proyecto para preparar el SDK, runtime o servidor correspondiente; esta actualización del README no migra dependencias ni acredita una ejecución reciente de todos los ejemplos.
 
 ## Introduction
 You are working on a part of an inventory tracking app for a bookstore.
@@ -19,6 +39,20 @@ To complete the task, you need to implement all methods in `BookRepository.cs` a
 9. `BooksController.Index` action should call repository method responsible for fetching all books.
 
 ## Hints
-1. Book object consits of Id and couple of string fields. You don`t have to worry about any validation of those fields, expect ISBN number. This number should be uniqe (in terms of default string equality, in ex. "Abc" is not equal to "abc"). 
+1. Book object consits of Id and couple of string fields. You don`t have to worry about any validation of those fields, expect ISBN number. This number should be uniqe (in terms of default string equality, in ex. "Abc" is not equal to "abc").
 2. Please be aware that some user could try to add book with isbn already existing in database or try to update to exisiting isbn. In such cases methods responsive for such behavior in repository should return `false`, and BooksController should behave as decribed previously.
 3. Remember that `BooksController.Update` will be provided with object instance that will be unrelated to any data context scope.
+
+## Mapa del repositorio
+
+- [BookCrudOperationASP_Net.Tests/BookCrudOperationASP_Net.Tests.csproj](<BookCrudOperationASP_Net.Tests/BookCrudOperationASP_Net.Tests.csproj>)
+- [BookCrudOperationASP_Net.csproj](<BookCrudOperationASP_Net.csproj>)
+- [BookCrudOperationASP_Net.sln](<BookCrudOperationASP_Net.sln>)
+- [BookCrudOperationASP_Net/wwwroot/lib/bootstrap/LICENSE](<BookCrudOperationASP_Net/wwwroot/lib/bootstrap/LICENSE>)
+- [Program.cs](<Program.cs>)
+
+## Autoría de esta documentación
+
+Repositorio mantenido por [Germán Bartoli](https://github.com/GermanBartoli). Guía revisada y actualizada con **Codex**, coautor de esta actualización documental. Los autores, colaboradores, licencias y recursos de terceros conservan sus créditos originales.
+
+Los commits de esta revisión incluyen `Co-authored-by: Codex <noreply@openai.com>`; esta atribución no modifica la autoría del historial anterior.
